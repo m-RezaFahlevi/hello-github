@@ -1,0 +1,3 @@
+I appear beacuse of this folder.
+
+This folder is only for java files.
