@@ -1,0 +1,54 @@
+# filename: uts_lab_SW2.ttl
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+@prefix dc: <http://purl.org/dc/elements/1.1/>
+
+rdf:Description rdf:about "Fedora Linux";
+				rdf:type _:b1;
+				dc:type "linux";
+				dc:creator "Fedora Project";
+				dc:contributor "RedHatEnterpriseLinux";
+				dc:license "Various free software licenses, plus proprietary".
+
+_:b1 rdf:resource "www.getfedora.org".
+
+rdfs:Class rdf:about "Fedora Workstation";
+			rdfs:subClassOf _:b2;
+			dc:title "Fedora WorkStation";
+			dc:type "Desktop".
+
+_:b2 rdf:resource "Fedora Spin".
+
+rdfs:Class rdf:about "https://spins.fedoraproject.org/id/cinnamon/";
+			rdfs:subClassOf _:b3;
+			dc:type "Fedora Spin";
+			dc:title "Fedora Cinnamon".
+
+_:b3 rdf:resource "Fedora Workstation".
+
+rdfs:Class rdf:about "https://spins.fedoraproject.org/id/kde/";
+			rdfs:subClassOf _:b3;
+			dc:type "Fedora Spin";
+			dc:title "Fedora KDE".
+
+rdfs:Class rdf:about "https://spins.fedoraproject.org/id/mate-compiz";
+			rdfs:subClassOf _:b3;
+			dc:type "Fedora Mate-Compiz".
+
+rdfs:Class rdf:about "https://getfedora.org/en/workstation/download/";
+			rdfs:subClassOf _:b3;
+			dc:type "Fedora Default Spin";
+			dc:title "Fedora GNOME".
+
+rdfs:Class rdf:about "https://spins.fedoraproject.org/id/lxde";
+			rdfs:subClassOf _:b3;
+			dc:type "Fedora Spin";
+			dc:title "Fedora LXDE".
+
+rdfs:Class rdf:about "Fedora Spin";
+			rdfs:subClassOf _:b4;
+			rdf:type _:b5.
+
+_:b4 rdf:resource "Fedora Linux".
+_:b5 rdf:resource "https:/spins.fedoraproject.org".

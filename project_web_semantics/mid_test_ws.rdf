@@ -1,0 +1,53 @@
+<?xml version = "1.0"?>
+
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <rdf:Description rdf:about="Fedora Linux">
+        <rdf:type rdf:resource="www.getfedora.org"/>
+        <dc:type>Linux</dc:type>
+        <dc:valid>13 Month after initial release</dc:valid>
+        <dc:creator>Fedora Project</dc:creator>
+        <dc:contributor>RedHatEnterpriseLinux</dc:contributor>
+        <dc:license>Various free software licenses, plus proprietary firmware files</dc:license>
+    </rdf:Description>
+    
+    <rdfs:Class rdf:about="Fedora Workstation">
+        <rdfs:subClassOf rdf:resource="Fedora Spin"/>
+        <dc:title>Fedora Workstation</dc:title>
+        <dc:type>Desktop</dc:type>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="https://spins.fedoraproject.org/id/cinnamon/">
+        <rdfs:subClassOf rdf:resource="Fedora Workstation"/>
+        <dc:type>Fedora Spin</dc:type>
+        <dc:title>Fedora Cinnamon</dc:title>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="https://spins.fedoraproject.org/id/kde/">
+        <rdfs:subClassOf rdf:resource="Fedora Workstation"/>
+        <dc:type>Fedora Spin</dc:type>
+        <dc:title>Fedora KDE</dc:title>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="https://spins.fedoraproject.org/id/mate-compiz/">
+        <rdfs:subClassOf rdf:resource="Fedora Workstation"/>
+        <dc:type>Fedora Spin</dc:type>
+        <dc:title>Fedora Mate-Compiz</dc:title>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="https://getfedora.org/en/workstation/download/">
+        <rdfs:subClassOf rdf:resource="Fedora Workstation"/>
+        <dc:type>Fedora Default Spin</dc:type>
+        <dc:title>Fedora GNOME</dc:title>
+    </rdfs:Class>
+    <rdfs:Class rdf:about="https://spins.fedoraproject.org/id/lxde/">
+        <rdfs:subClassOf rdf:resource="Fedora Workstation"/>
+        <dc:type>Fedora Spin</dc:type>
+        <dc:title>Fedora LXDE</dc:title>
+    </rdfs:Class>
+    
+    <rdfs:Class rdf:about="Fedora Spin">
+        <rdfs:subClassOf rdf:resource="Fedora Linux"/>
+        <rdf:type rdf:resource="https://spins.fedoraproject.org"/>
+    </rdfs:Class>
+
+</rdf:RDF>
